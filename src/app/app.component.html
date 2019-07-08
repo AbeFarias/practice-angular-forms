@@ -56,10 +56,12 @@
 
         <span *ngIf="!signupForm.valid && signupForm.touched" class="form-text text-muted">Please enter valid info!</span>
 
-        <button class="btn btn-primary" type="submit">Submit</button>
+        <button class="btn btn-primary" type="submit" [disabled]="!signupForm.valid">Submit</button>
 
+        <br>
 
-
+        <button id="dangerButton" class="btn btn-danger" type="button" (click)="onReset()">Reset</button>
+      
       </form>
     </div>
   </div>
