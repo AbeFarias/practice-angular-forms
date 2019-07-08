@@ -31,6 +31,22 @@ export class AppComponent implements OnInit{
     this.signupForm.statusChanges.subscribe(
       (status) => console.log(status)
     );
+
+    // //Set form values
+    // this.signupForm.setValue({
+    //   'accountType': 'Personal',
+    //   'name': 'Abe',
+    //   'email': 'a.farias1196@gmail.com',
+    //   'streetAddress': '1234 Some Street',
+    //   'city': 'Manteca',
+    //   'country': 'United States',
+    //   'zipCode': '95337'
+    // });
+
+    // Update/patch form values
+    this.signupForm.patchValue({
+      'email': 'a.farias1196@gmail.com'
+    });
   }
 
   onSubmit() {
