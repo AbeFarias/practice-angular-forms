@@ -6,6 +6,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
+
 export class AppComponent implements OnInit{
   title = 'angular-form-practice';
   accountType = ['Personal', 'Business'];
@@ -31,17 +32,6 @@ export class AppComponent implements OnInit{
     this.signupForm.statusChanges.subscribe(
       (status) => console.log(status)
     );
-
-    // //Set form values
-    // this.signupForm.setValue({
-    //   'accountType': 'Personal',
-    //   'name': 'Abe',
-    //   'email': 'a.farias1196@gmail.com',
-    //   'streetAddress': '1234 Some Street',
-    //   'city': 'Manteca',
-    //   'country': 'United States',
-    //   'zipCode': '95337'
-    // });
 
     // Update/patch form values
     this.signupForm.patchValue({
